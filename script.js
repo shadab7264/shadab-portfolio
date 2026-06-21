@@ -3,7 +3,7 @@
    ========================================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
-    
+
     // ==========================================
     // 1. DYNAMIC NAVIGATION & MOBILE NAV TOGGLE
     // ==========================================
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "DTU Student",
         "Problem Solver"
     ];
-    
+
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -79,10 +79,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const typeSpeed = 100;
     const eraseSpeed = 50;
     const waitTimeBeforeErase = 1800;
-    
+
     function typeEffect() {
         const currentRole = roles[wordIndex];
-        
+
         if (isDeleting) {
             typingElement.textContent = currentRole.substring(0, charIndex - 1);
             charIndex--;
@@ -90,9 +90,9 @@ document.addEventListener("DOMContentLoaded", () => {
             typingElement.textContent = currentRole.substring(0, charIndex + 1);
             charIndex++;
         }
-        
+
         let dynamicDelay = isDeleting ? eraseSpeed : typeSpeed;
-        
+
         if (!isDeleting && charIndex === currentRole.length) {
             isDeleting = true;
             dynamicDelay = waitTimeBeforeErase; // Wait at completion
@@ -101,10 +101,10 @@ document.addEventListener("DOMContentLoaded", () => {
             wordIndex = (wordIndex + 1) % roles.length;
             dynamicDelay = 300; // Small rest before writing next
         }
-        
+
         setTimeout(typeEffect, dynamicDelay);
     }
-    
+
     if (typingElement) {
         typeEffect();
     }
@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const canvas = document.getElementById("particle-canvas");
     if (canvas && typeof THREE !== 'undefined') {
         const scene = new THREE.Scene();
-        
+
         // Perspective Camera
         const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
         camera.position.z = 90;
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const cols = 55;
         const rows = 55;
         const geometry = new THREE.PlaneGeometry(240, 240, cols, rows);
-        
+
         // Material - Glowing Luxury Gold points
         const material = new THREE.PointsMaterial({
             color: 0xc5a880,
@@ -170,14 +170,14 @@ document.addEventListener("DOMContentLoaded", () => {
             requestAnimationFrame(animate3D);
 
             const time = clock.getElapsedTime();
-            
+
             // Smooth mouse interpolation (easing)
             mouseX += (targetMouseX - mouseX) * 0.08;
             mouseY += (targetMouseY - mouseY) * 0.08;
 
             // Slowly rotate the mesh
             mesh.rotation.z = time * 0.006;
-            
+
             // Undulate mesh grid heights (Z-axis)
             const position = geometry.attributes.position;
             for (let i = 0; i < position.count; i++) {
@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Base Wave Height (Simplex noise simulation via combined trig functions)
                 let z = Math.sin(vx * 0.04 + time * 0.4) * Math.cos(vy * 0.04 + time * 0.4) * 7;
                 z += Math.sin(vx * 0.1 - time * 0.25) * Math.cos(vy * 0.08) * 2;
-                
+
                 // Add mouse influence deformation
                 const distToMouse = Math.sqrt((vx - mouseX * 2) * (vx - mouseX * 2) + (vy + mouseY * 2) * (vy + mouseY * 2));
                 if (distToMouse < 60) {
@@ -217,17 +217,17 @@ document.addEventListener("DOMContentLoaded", () => {
         el.addEventListener("mouseenter", () => {
             el.style.transition = "transform 0.1s ease"; // Quick tracking
         });
-        
+
         el.addEventListener("mousemove", (e) => {
             const rect = el.getBoundingClientRect();
             const width = rect.width;
             const height = rect.height;
             const x = e.clientX - rect.left - width / 2;
             const y = e.clientY - rect.top - height / 2;
-            
+
             const rotateX = -(y / height) * 12;
             const rotateY = (x / width) * 12;
-            
+
             el.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.025)`;
         });
 
@@ -291,11 +291,11 @@ document.addEventListener("DOMContentLoaded", () => {
     crmNavBtns.forEach(btn => {
         btn.addEventListener("click", () => {
             const targetTab = btn.getAttribute("data-tab");
-            
+
             // Toggle active buttons
             crmNavBtns.forEach(b => b.classList.remove("active"));
             btn.classList.add("active");
-            
+
             // Toggle active panels
             crmPanels.forEach(p => {
                 p.classList.remove("active");
@@ -314,14 +314,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function appendCrmLog(message, type = "info") {
         if (!logTerminal) return;
-        
+
         const now = new Date();
         const timeStr = now.toTimeString().split(" ")[0];
-        
+
         const line = document.createElement("div");
         line.className = `terminal-line log-${type}`;
         line.textContent = `[${timeStr}] ${message}`;
-        
+
         logTerminal.appendChild(line);
         logTerminal.scrollTop = logTerminal.scrollHeight;
     }
@@ -334,16 +334,16 @@ document.addEventListener("DOMContentLoaded", () => {
         crmCandidatesBody.addEventListener("click", (e) => {
             const btn = e.target.closest(".btn-crm-action");
             if (!btn) return;
-            
+
             const tr = btn.closest("tr");
             const candId = btn.getAttribute("data-id");
             const name = tr.querySelector(".candidate-name").textContent;
             const badge = tr.querySelector(".status-badge");
-            
+
             let currentStatus = badge.textContent.trim();
             let nextStatus = "";
             let badgeClass = "";
-            
+
             if (currentStatus === "Screening") {
                 nextStatus = "Shortlisted";
                 badgeClass = "status-badge progress-stage";
@@ -356,7 +356,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 btn.textContent = "Completed";
                 btn.classList.add("disabled");
                 btn.disabled = true;
-                
+
                 // Trigger placement celebration log
                 appendCrmLog(`CELEBRATION: Candidate ${name} successfully PLACED!`, "success");
             }
@@ -374,10 +374,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const atsPlaceholderState = document.getElementById("ats-placeholder-state");
     const atsScanningState = document.getElementById("ats-scanning-state");
     const atsReportState = document.getElementById("ats-report-state");
-    
+
     const atsScanText = document.getElementById("ats-scan-text");
     const atsScanProgress = document.getElementById("ats-scan-progress");
-    
+
     const reportName = document.getElementById("report-name");
     const reportRole = document.getElementById("report-role");
     const reportStatus = document.getElementById("report-status");
@@ -393,7 +393,7 @@ document.addEventListener("DOMContentLoaded", () => {
             presetBtns.forEach(b => b.classList.remove("active"));
             btn.classList.add("active");
             activePreset = btn.getAttribute("data-preset");
-            
+
             const presetName = btn.textContent;
             appendCrmLog(`ATS: Preset loaded [${presetName}]`, "info");
         });
@@ -434,40 +434,40 @@ document.addEventListener("DOMContentLoaded", () => {
             const role = document.getElementById("ats-role").value;
             const currentPreset = presetData[activePreset];
             const data = currentPreset.scores[role];
-            
+
             // Log scan start
             appendCrmLog(`ATS: Initiating evaluation for candidate [${currentPreset.name}] target [${role}]`, "info");
-            
+
             // Hide previous reports
             atsPlaceholderState.classList.add("hide-element");
             atsReportState.classList.add("hide-element");
             atsScanningState.classList.remove("hide-element");
-            
+
             // Progress Bar simulation
             let progress = 0;
             atsScanProgress.style.width = "0%";
             atsScanText.textContent = "Reading resume token vectors...";
-            
+
             const interval = setInterval(() => {
                 progress += 20;
                 atsScanProgress.style.width = `${progress}%`;
-                
+
                 if (progress === 40) {
                     atsScanText.textContent = "Embedding vectors with Gemini AI API...";
                 } else if (progress === 80) {
                     atsScanText.textContent = "Matching against target role keyword constraints...";
                 } else if (progress >= 100) {
                     clearInterval(interval);
-                    
+
                     // Render report
                     atsScanningState.classList.add("hide-element");
                     atsReportState.classList.remove("hide-element");
-                    
+
                     reportName.textContent = currentPreset.name;
                     reportRole.textContent = `Targeting: ${role}`;
                     reportStatus.textContent = data.status;
                     reportMissing.textContent = data.missing;
-                    
+
                     // Adjust color styling based on score
                     if (data.score >= 85) {
                         reportStatus.className = "detail-val text-green";
@@ -478,11 +478,11 @@ document.addEventListener("DOMContentLoaded", () => {
                         reportStatus.className = "detail-val";
                         reportStatus.style.color = "#ff3366";
                     }
-                    
+
                     // Set SVG progress score circle
                     atsScoreCircle.style.strokeDasharray = `${data.score}, 100`;
                     atsScoreText.textContent = `${data.score}%`;
-                    
+
                     appendCrmLog(`GEMINI-AI: Computed ATS score of ${data.score}% for ${currentPreset.name}`, "success");
                 }
             }, 350);
@@ -504,7 +504,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setInterval(() => {
         if (!logTerminal) return;
-        
+
         // Only append background log 30% of the time to avoid spamming the screen
         if (Math.random() > 0.4) {
             const index = Math.floor(Math.random() * backgroundLogEvents.length);
