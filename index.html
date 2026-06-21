@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadab Karim | Portfolio & Live Terminal</title>
+    
+    <!-- SEO Optimization -->
+    <meta name="description" content="Portfolio of Shadab Karim, AI Builder & Full Stack Developer from DTU. Initiate a direct 1-to-1 WebRTC video/audio call instantly in-browser.">
+    <meta name="keywords" content="Shadab Karim, Portfolio, DTU, Computer Science, Full Stack, WebRTC Video Call, AI Builder">
+    <meta name="author" content="Shadab Karim">
+
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="style.css?v=1.4">
+
+    <!-- Google Fonts: Outfit & Fira Code for premium digital look -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- Three.js for ultra luxury 3D WebGL animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+
+
+
+    <!-- Interactive Canvas Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Header / Navbar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="logo-text">Shadab Karim</span>
+                <span class="logo-dot"></span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a class="nav-link active" href="#home">Home</a></li>
+                <li><a class="nav-link" href="#about">About</a></li>
+                <li><a class="nav-link" href="#skills">Skills</a></li>
+                <li><a class="nav-link" href="#projects">Projects</a></li>
+                <li><a class="nav-link" href="#certifications">Certifications</a></li>
+                <li><a class="nav-link" href="#crm-sandbox">CRM Sandbox</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="mobile-toggle" id="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="left">
+                <div class="status-badge pulse-container">
+                    <span class="pulse-dot"></span>
+                    <span class="status-text">Available for Opportunities</span>
+                </div>
+
+                <h3 class="subtitle">Hello, I'm</h3>
+                <h1 class="title-name">Shadab Karim</h1>
+                
+                <div class="tagline">
+                    AI Builder <span class="divider">•</span> Full Stack Developer <span class="divider">•</span> Problem Solver
+                </div>
+
+                <div class="typing-container">
+                    <span class="typing-prefix">Constantly </span>
+                    <span id="typing" class="typing-text"></span>
+                    <span class="typing-cursor">|</span>
+                </div>
+
+                <p class="description">
+                    Final Year Computer Science Student at DTU, Full Stack Developer, AI Enthusiast, and Founder of Skyward Career & Placement Hub. Building scalable digital products and modern web experiences.
+                </p>
+
+                <div class="buttons">
+                    <a href="https://github.com/shadab7264" target="_blank" class="btn btn-primary">
+                        <span>GitHub Profile</span>
+                        <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/shadab-karim-38194822a" target="_blank" class="btn btn-secondary">
+                        <span>LinkedIn</span>
+                        <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    
+                    <a href="#crm-sandbox" class="btn btn-glow">
+                        <span>CRM Sandbox</span>
+                        <span class="btn-glow-pulse"></span>
+                    </a>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-card">
+                        <h3 class="stat-number">3+</h3>
+                        <span class="stat-label">Live Projects</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3 class="stat-number">1+</h3>
+                        <span class="stat-label">Years Learning</span>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3 class="stat-number">100%</h3>
+                        <span class="stat-label">Dedication</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="profile-frame">
+                    <div class="glow-border"></div>
+                    <img src="image/profile.jpg.jpg" alt="Shadab Karim Profile" class="profile-image">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-card glow-card">
+                    <p class="about-lead">
+                        I'm Shadab Karim, a Final Year B.Tech Computer Science student at **Delhi Technological University (DTU)** and a passionate Full Stack Developer.
+                    </p>
+                    <p class="about-body">
+                        I enjoy building modern web applications, AI-powered systems, e-commerce solutions, and digital products that solve real-world complexities. I thrive on translating intricate client problems into elegant, highly performant codebases.
+                    </p>
+                    <p class="about-body">
+                        Over the past years, I have engineered scalable products like RentKar, Arvelo E-Commerce, and Skyward Career & Placement Hub. Let's make something extraordinary.
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="section-container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-card glow-card">
+                    <div class="skill-icon-wrap">
+                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="#4facfe" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                    </div>
+                    <h3>Frontend Development</h3>
+                    <p>HTML5, CSS3, JavaScript (ES6+), React.js</p>
+                    <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+                </div>
+
+                <div class="skill-card glow-card">
+                    <div class="skill-icon-wrap">
+                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="#8e44ff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                    </div>
+                    <h3>Backend Architecture</h3>
+                    <p>Node.js, Express.js, REST APIs</p>
+                    <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+                </div>
+
+                <div class="skill-card glow-card">
+                    <div class="skill-icon-wrap">
+                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="#4facfe" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path></svg>
+                    </div>
+                    <h3>Database Management</h3>
+                    <p>MongoDB, MySQL, Database Optimization</p>
+                    <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
+                </div>
+
+                <div class="skill-card glow-card">
+                    <div class="skill-icon-wrap">
+                        <svg viewBox="0 0 24 24" width="32" height="32" stroke="#8e44ff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                    </div>
+                    <h3>Developer Workflow</h3>
+                    <p>Git, GitHub, AI Tools, VS Code, CI/CD</p>
+                    <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="section-container">
+            <h2 class="section-title">Featured Work</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card glow-card animate-glow">
+                    <div class="project-tag">SaaS / AI</div>
+                    <h3>Skyward Intelligence</h3>
+                    <p>
+                        A production-grade AI-powered career platform providing ATS resume scoring, simulated mock interviews, automated skill gap mapping, and custom roadmap generation.
+                    </p>
+                    <div class="tech">
+                        React 19 <span class="bullet">•</span> Tailwind CSS v4 <span class="bullet">•</span> Supabase <span class="bullet">•</span> Express <span class="bullet">•</span> Gemini API
+                    </div>
+                </div>
+
+                <div class="project-card glow-card">
+                    <div class="project-tag">CONSULTANCY</div>
+                    <h3>Skyward Hub</h3>
+                    <p>
+                        A modern education consultancy platform helping students with admissions, career guidance, lead generation, and university enrollment.
+                    </p>
+                    <div class="tech">
+                        HTML5 <span class="bullet">•</span> CSS3 <span class="bullet">•</span> JS <span class="bullet">•</span> Node.js
+                    </div>
+                </div>
+
+                <div class="project-card glow-card">
+                    <div class="project-tag">E-COMMERCE</div>
+                    <h3>Arvelo Store</h3>
+                    <p>
+                        A responsive e-commerce platform featuring modern styling, smooth animations, product showcase, and optimized layouts.
+                    </p>
+                    <div class="tech">
+                        HTML5 <span class="bullet">•</span> Vanilla CSS <span class="bullet">•</span> React.js <span class="bullet">•</span> MongoDB
+                    </div>
+                </div>
+
+                <div class="project-card glow-card">
+                    <div class="project-tag">SECURITY / ML</div>
+                    <h3>Data Securing ML</h3>
+                    <p>
+                        Machine learning based fraud detection system utilizing advanced anomaly detection techniques to improve transaction security in payment networks.
+                    </p>
+                    <div class="tech">
+                        Python <span class="bullet">•</span> Pandas <span class="bullet">•</span> Scikit-Learn <span class="bullet">•</span> Jupyter
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="certifications" id="certifications">
+        <div class="section-container">
+            <h2 class="section-title">Certifications</h2>
+            <p class="section-subtitle">Verified professional credentials and accomplishments.</p>
+            
+            <div class="certifications-grid">
+                <div class="cert-card glow-card animate-glow">
+                    <div class="cert-badge-icon">🏆</div>
+                    <div class="cert-content">
+                        <span class="cert-tag">AI & DEVELOPMENT</span>
+                        <h3>AI Builder Certificate</h3>
+                        <span class="cert-org">Digital Heroes</span>
+                        <p class="cert-desc">
+                            Demonstrated excellence in engineering scalable AI systems, agent logic, prompt programming, and full-stack software integration pipelines.
+                        </p>
+                        <div class="cert-id-wrapper">
+                            <span class="id-label">Credential ID:</span>
+                            <code>DMH-AT-SK-K397-23S9</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skyward CRM Sandbox (Interactive showcase of Skyward Hub Admin Panel & CRM features) -->
+    <section class="crm-sandbox" id="crm-sandbox">
+        <div class="section-container">
+            <h2 class="section-title">Skyward CRM Sandbox</h2>
+            <p class="section-subtitle">Experience a functional interactive simulation of the Skyward Career & Placement Hub Admin & Recruitment CRM.</p>
+            
+            <div class="crm-dashboard glow-card" id="crm-dashboard">
+                <!-- Sidebar navigation -->
+                <div class="crm-sidebar">
+                    <div class="crm-brand">
+                        <span class="brand-text">Skyward CRM</span>
+                        <span class="brand-badge">v1.2-beta</span>
+                    </div>
+                    <nav class="crm-nav">
+                        <button class="crm-nav-btn active" id="crm-btn-dashboard" data-tab="dashboard">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+                            <span>Dashboard</span>
+                        </button>
+                        <button class="crm-nav-btn" id="crm-btn-candidates" data-tab="candidates">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            <span>Candidates</span>
+                            <span class="badge-count" id="candidate-count">4</span>
+                        </button>
+                        <button class="crm-nav-btn" id="crm-btn-ats" data-tab="ats">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                            <span>ATS Scanner</span>
+                        </button>
+                        <button class="crm-nav-btn" id="crm-btn-logs" data-tab="logs">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none"><polyline points="4 17 10 11 12 13 18 7"></polyline><polyline points="13 7 18 7 18 12"></polyline></svg>
+                            <span>Live Logs</span>
+                            <span class="pulse-dot-green"></span>
+                        </button>
+                    </nav>
+
+                    <div class="crm-sidebar-footer">
+                        <div class="crm-user-profile">
+                            <div class="crm-avatar">SK</div>
+                            <div class="crm-user-info">
+                                <span class="profile-name">Shadab Karim</span>
+                                <span class="profile-role">Super Admin</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content Display -->
+                <div class="crm-main">
+                    <!-- Tab Panel 1: Dashboard Overview -->
+                    <div class="crm-panel active" id="crm-panel-dashboard">
+                        <div class="crm-panel-header">
+                            <h3>Dashboard Overview</h3>
+                            <span class="panel-subtitle">Key performance metrics and recruitment analytics.</span>
+                        </div>
+
+                        <div class="crm-stats-grid">
+                            <div class="crm-stat-box">
+                                <div class="stat-icon-wrap students-icon">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" stroke="#c5a880" stroke-width="2" fill="none"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                                </div>
+                                <div class="stat-details">
+                                    <span class="stat-title">Registered Students</span>
+                                    <span class="stat-value" id="stat-total-students">1,248</span>
+                                    <span class="stat-trend trend-up">↑ 18% this month</span>
+                                </div>
+                            </div>
+
+                            <div class="crm-stat-box">
+                                <div class="stat-icon-wrap rate-icon">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" stroke="#c5a880" stroke-width="2" fill="none"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                                </div>
+                                <div class="stat-details">
+                                    <span class="stat-title">Placement Rate</span>
+                                    <span class="stat-value">84.2%</span>
+                                    <span class="stat-trend trend-up">↑ 4.1% YoY</span>
+                                </div>
+                            </div>
+
+                            <div class="crm-stat-box">
+                                <div class="stat-icon-wrap drives-icon">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" stroke="#c5a880" stroke-width="2" fill="none"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                                </div>
+                                <div class="stat-details">
+                                    <span class="stat-title">Active Drives</span>
+                                    <span class="stat-value" id="stat-active-drives">15 Active</span>
+                                    <span class="stat-trend">Google, MS, Skyward</span>
+                                </div>
+                            </div>
+
+                            <div class="crm-stat-box">
+                                <div class="stat-icon-wrap score-icon">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" stroke="#c5a880" stroke-width="2" fill="none"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                                </div>
+                                <div class="stat-details">
+                                    <span class="stat-title">Avg Resume Score</span>
+                                    <span class="stat-value">82/100</span>
+                                    <span class="stat-trend trend-up">↑ 12 pts via AI prep</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Graphical simulation -->
+                        <div class="crm-visual-section">
+                            <h4 class="visual-title">Placements by Tech Stack</h4>
+                            <div class="crm-chart-container">
+                                <div class="chart-bar-wrap">
+                                    <span class="chart-label">Frontend (React/Vite)</span>
+                                    <div class="chart-track">
+                                        <div class="chart-fill fill-primary" style="width: 88%;">88%</div>
+                                    </div>
+                                </div>
+                                <div class="chart-bar-wrap">
+                                    <span class="chart-label">Backend (Node/Express)</span>
+                                    <div class="chart-track">
+                                        <div class="chart-fill fill-secondary" style="width: 72%;">72%</div>
+                                    </div>
+                                </div>
+                                <div class="chart-bar-wrap">
+                                    <span class="chart-label">Full Stack (MERN)</span>
+                                    <div class="chart-track">
+                                        <div class="chart-fill fill-accent" style="width: 64%;">64%</div>
+                                    </div>
+                                </div>
+                                <div class="chart-bar-wrap">
+                                    <span class="chart-label">AI / Data Science</span>
+                                    <div class="chart-track">
+                                        <div class="chart-fill fill-gold" style="width: 52%;">52%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab Panel 2: Candidates CRM -->
+                    <div class="crm-panel" id="crm-panel-candidates">
+                        <div class="crm-panel-header">
+                            <h3>Candidate Pipeline</h3>
+                            <span class="panel-subtitle">Manage student enrollment, ATS scores, and placement stages.</span>
+                        </div>
+
+                        <div class="crm-table-wrapper">
+                            <table class="crm-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>College</th>
+                                        <th>Role</th>
+                                        <th>ATS Score</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="crm-candidates-body">
+                                    <tr data-id="1">
+                                        <td>
+                                            <div class="candidate-meta">
+                                                <span class="candidate-name">Amit Sharma</span>
+                                                <span class="candidate-email">amit.sharma@dtu.ac.in</span>
+                                            </div>
+                                        </td>
+                                        <td>DTU</td>
+                                        <td>Software Engineer</td>
+                                        <td>
+                                            <div class="score-badge good">88</div>
+                                        </td>
+                                        <td><span class="status-badge progress-stage">Interviewing</span></td>
+                                        <td><button class="btn-crm-action" data-id="1">Advance Stage</button></td>
+                                    </tr>
+                                    <tr data-id="2">
+                                        <td>
+                                            <div class="candidate-meta">
+                                                <span class="candidate-name">Priya Patel</span>
+                                                <span class="candidate-email">priya.patel@dtu.ac.in</span>
+                                            </div>
+                                        </td>
+                                        <td>DTU</td>
+                                        <td>AI Engineer</td>
+                                        <td>
+                                            <div class="score-badge excellent">92</div>
+                                        </td>
+                                        <td><span class="status-badge progress-stage">Shortlisted</span></td>
+                                        <td><button class="btn-crm-action" data-id="2">Advance Stage</button></td>
+                                    </tr>
+                                    <tr data-id="3">
+                                        <td>
+                                            <div class="candidate-meta">
+                                                <span class="candidate-name">Rohan Das</span>
+                                                <span class="candidate-email">rohan.das@nsut.ac.in</span>
+                                            </div>
+                                        </td>
+                                        <td>NSUT</td>
+                                        <td>Full Stack Developer</td>
+                                        <td>
+                                            <div class="score-badge average">76</div>
+                                        </td>
+                                        <td><span class="status-badge success-stage">Placed</span></td>
+                                        <td><button class="btn-crm-action disabled" disabled>Completed</button></td>
+                                    </tr>
+                                    <tr data-id="4">
+                                        <td>
+                                            <div class="candidate-meta">
+                                                <span class="candidate-name">Anjali Gupta</span>
+                                                <span class="candidate-email">anjali.g@dtu.ac.in</span>
+                                            </div>
+                                        </td>
+                                        <td>DTU</td>
+                                        <td>Backend Developer</td>
+                                        <td>
+                                            <div class="score-badge good">81</div>
+                                        </td>
+                                        <td><span class="status-badge pending-stage">Screening</span></td>
+                                        <td><button class="btn-crm-action" data-id="4">Advance Stage</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Tab Panel 3: AI ATS Scanner Simulator -->
+                    <div class="crm-panel" id="crm-panel-ats">
+                        <div class="crm-panel-header">
+                            <h3>AI ATS Evaluator</h3>
+                            <span class="panel-subtitle">Simulate resume parsing and matching score computation.</span>
+                        </div>
+
+                        <div class="ats-simulation-grid">
+                            <div class="ats-inputs">
+                                <div class="ats-form-group">
+                                    <label for="ats-role">Target Placement Role</label>
+                                    <select id="ats-role" class="crm-input">
+                                        <option value="Software Engineer">Software Engineer (L4)</option>
+                                        <option value="AI Engineer">AI Engineer / ML Specialist</option>
+                                        <option value="Frontend Developer">Frontend React Specialist</option>
+                                        <option value="Backend Developer">Node/Express Backend Architect</option>
+                                    </select>
+                                </div>
+
+                                <div class="ats-form-group">
+                                    <label>Select Candidate Resume Template</label>
+                                    <div class="resume-presets">
+                                        <button class="preset-btn active" data-preset="1">Shadab Karim (DTU) - Lead Resume</button>
+                                        <button class="preset-btn" data-preset="2">Junior Frontend Developer (Entry Level)</button>
+                                        <button class="preset-btn" data-preset="3">Generic Non-Technical Resume (Low Match)</button>
+                                    </div>
+                                </div>
+
+                                <button class="btn btn-primary btn-run-ats" id="btn-run-ats">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                    <span>Run AI ATS Evaluation</span>
+                                </button>
+                            </div>
+
+                            <div class="ats-results">
+                                <div class="ats-placeholder-state" id="ats-placeholder-state">
+                                    <svg viewBox="0 0 24 24" width="48" height="48" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                                    <span>Awaiting evaluation trigger...</span>
+                                </div>
+
+                                <div class="ats-scanning-state hide-element" id="ats-scanning-state">
+                                    <div class="ats-scanner-laser"></div>
+                                    <div class="ats-spinner"></div>
+                                    <span id="ats-scan-text">Reading resume token vectors...</span>
+                                    <div class="crm-progress-bar"><div class="crm-progress" id="ats-scan-progress"></div></div>
+                                </div>
+
+                                <div class="ats-report-state hide-element" id="ats-report-state">
+                                    <div class="report-header">
+                                        <div class="report-score-ring">
+                                            <svg viewBox="0 0 36 36" class="circular-chart gold">
+                                                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                                <path class="circle" id="ats-score-circle" stroke-dasharray="94, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                                <text x="18" y="20.35" class="percentage" id="ats-score-text">94%</text>
+                                            </svg>
+                                        </div>
+                                        <div class="report-title-block">
+                                            <span class="report-badge">AI MATCH SUCCESS</span>
+                                            <h4 id="report-name">Shadab Karim</h4>
+                                            <p id="report-role">Targeting: Software Engineer</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="report-details">
+                                        <div class="detail-row">
+                                            <span class="detail-label">Status:</span>
+                                            <span class="detail-val text-green" id="report-status">Strong Candidate Match</span>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="detail-label">Missing Skills:</span>
+                                            <span class="detail-val" id="report-missing">None identified</span>
+                                        </div>
+                                        <div class="detail-row">
+                                            <span class="detail-label">Format Check:</span>
+                                            <span class="detail-val text-green">100% Compliant (Single Column)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab Panel 4: Live Logs Ticker -->
+                    <div class="crm-panel" id="crm-panel-logs">
+                        <div class="crm-panel-header">
+                            <h3>Live Placement Portal Events</h3>
+                            <span class="panel-subtitle">Simulated audit trail logs from the active Supabase career database.</span>
+                        </div>
+
+                        <div class="crm-terminal-wrap">
+                            <div class="terminal-header">
+                                <div class="terminal-dots">
+                                    <span class="dot-red"></span>
+                                    <span class="dot-yellow"></span>
+                                    <span class="dot-green"></span>
+                                </div>
+                                <span class="terminal-title">skyward-database-events.log</span>
+                            </div>
+                            <div class="terminal-body" id="crm-log-terminal">
+                                <div class="terminal-line">[17:10:05] SYSTEM: Initialized placement sandbox environment.</div>
+                                <div class="terminal-line">[17:11:18] SUPABASE: Connected successfully to PostgreSQL DB.</div>
+                                <div class="terminal-line">[17:12:44] GEMINI-AI: Ready for prompt embeddings.</div>
+                                <div class="terminal-line">[17:14:02] LOG: Visitor loaded portfolio website. Welcome.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-subtitle">Let's turn ideas into innovative digital solutions. Reach out for collaborations or project discussions.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-card glow-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email Address</h3>
+                    <p class="contact-value">shadab7264karim@gmail.com</p>
+                    <a href="mailto:shadab7264karim@gmail.com" class="contact-link">Send Email &rarr;</a>
+                </div>
+
+                <div class="contact-card glow-card">
+                    <div class="contact-icon">💻</div>
+                    <h3>GitHub Profile</h3>
+                    <p class="contact-value">github.com/shadab7264</p>
+                    <a href="https://github.com/shadab7264" target="_blank" class="contact-link">View Projects &rarr;</a>
+                </div>
+
+                <div class="contact-card glow-card">
+                    <div class="contact-icon">🔗</div>
+                    <h3>LinkedIn Network</h3>
+                    <p class="contact-value">linkedin.com/in/shadab-karim-38194822a</p>
+                    <a href="https://www.linkedin.com/in/shadab-karim-38194822a" target="_blank" class="contact-link">Connect Now &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-quote">Let's Build Something Extraordinary Together</p>
+        <p class="footer-name">Open to Opportunities, Collaborations & Freelance Projects</p>
+        <p class="footer-copy">&copy; 2026 Shadab Karim. Built with absolute premium aesthetic standards.</p>
+    </footer>
+
+    <!-- JS logic -->
+    <script src="script.js"></script>
+</body>
+</html>
